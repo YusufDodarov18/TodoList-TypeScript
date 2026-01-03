@@ -74,6 +74,9 @@ function App() {
           const data=await axios.post(api,{name:name,phone:phone,age:age,completed:false})
           setData(prevData=>[...prevData,data.data])
           toast.success("Add Todo")
+          setName("")
+          setAge(null)
+          setPhone("")
       }
     }
 
