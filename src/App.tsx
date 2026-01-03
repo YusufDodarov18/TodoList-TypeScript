@@ -71,7 +71,7 @@ function App() {
 
     const AddTodo=async()=>{
       if(name.trim()!==""&&phone.trim()!==""&&age!==0){
-          const data=await axios.post(api,{name:name,phone:phone,age:age,completed:true})
+          const data=await axios.post(api,{name:name,phone:phone,age:age,completed:false})
           setData(prevData=>[...prevData,data.data])
           toast.success("Add Todo")
       }
